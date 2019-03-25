@@ -1,10 +1,8 @@
 import random
 
-
-
 outfile = open('output.txt' , 'w')
 
-
+#loops 20 times
 for i in range(20):
     counter = 0
     R1 = 0
@@ -18,22 +16,11 @@ for i in range(20):
         R3 = random.randint(1,6)
         R4 = random.randint(1,6)
         R5 = random.randint(1,6)
-        print(R1, end="", flush=True),
-        print(' ', end="", flush=True),
-        print(R2, end="", flush=True),
-        print(' ', end="", flush=True),
-        print(R3, end="", flush=True),
-        print(' ', end="", flush=True),
-        print(R4, end="", flush=True),
-        print(' ', end="", flush=True),
-        print(R5),
-        counter = counter + 1
-
+        print("roll: %s %s %s %s %s" % (R1, R2, R3, R4, R5))
 
     outfile.write('yahtzee in ')
     outfile.write(str(counter))
     outfile.write(' moves\n')
 
 outfile.close()
-
 print('done')
